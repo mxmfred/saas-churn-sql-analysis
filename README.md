@@ -1,66 +1,97 @@
-# saas-churn-sql-analysis
+# SaaS Churn & Engagement Analysis (SQL)
 
-SQL portfolio project analyzing SaaS subscription, churn, and feature adoption.
+SQL portfolio project analyzing SaaS subscription behavior, churn dynamics, and product feature adoption using a multi-table SaaS dataset.
 
-## SaaS Churn & Engagement Analysis
+---
 
-This project analyzes a SaaS subscription dataset to understand **customer behavior, churn, and feature engagement**. The goal is to demonstrate applied **SQL and data analysis skills** relevant to business decision-making.
+## Overview
 
-The analysis was conducted using **DuckDB SQL** inside a Kaggle notebook.
+This project analyzes a SaaS subscription dataset to understand **customer retention, churn drivers, and product engagement trends**. The objective is to demonstrate practical **SQL analytics skills** used in real-world SaaS and business intelligence environments.
+
+All analysis was performed using **DuckDB SQL inside a Kaggle notebook**, with results visualized and interpreted for business insights.
+
+---
 
 ## Dataset
 
-The dataset is publicly available on Kaggle: [SaaS Subscription & Churn Analytics Dataset](https://www.kaggle.com/datasets).  
+The dataset is publicly available on Kaggle:  
+**SaaS Subscription & Churn Analytics Dataset**
 
-It includes 5 tables:
+It consists of five relational tables:
 
 - `accounts` – customer metadata  
 - `subscriptions` – subscription lifecycles, plan tiers, revenue  
-- `feature_usage` – daily product usage logs  
-- `support_tickets` – support interactions  
-- `churn_events` – churn dates and reasons  
+- `feature_usage` – daily product interaction logs  
+- `support_tickets` – customer support activity  
+- `churn_events` – churn dates, reasons, and refund behavior  
 
-## Key Questions & Metrics
+The dataset supports time-based analysis, segmentation, and realistic edge cases common in SaaS data.
 
-1. **Active Subscribers per Month**  
-   - Counts total active customers each month  
-   - Insight: Tracks overall growth and retention trends  
+---
 
-2. **Monthly Churn Rate**  
-   - Percentage of active users that churned per month  
-   - Insight: Shows periods of high churn and opportunities for retention  
+## Key Analyses & Visualizations
 
-3. **Plan-Level Churn Rate**  
-   - Churn rate per plan tier (e.g., Pro, Enterprise)  
-   - Insight: Identifies which subscription tiers are at risk  
+### Active Subscribers per Month
+![Active Subscribers per Month](images/active_subscribers.png)
 
-4. **Feature Adoption**  
-   - Number of unique users interacting with each product feature per month  
-   - Insight: Highlights popular features and engagement trends  
+**Insight:**  
+Active subscribers grow steadily over time, indicating consistent customer acquisition and overall retention strength.
 
-5. **Support Tickets vs Churn**  
-   - Analyzes correlation between support ticket count and churn  
-   - Insight: Helps understand if users needing more support are more likely to churn  
+---
 
-## Tools & Skills
+### Monthly Churn Rate
+![Monthly Churn Rate](images/monthly_churn_rate.png)
 
-- **SQL** (DuckDB) for querying and aggregating data  
-- **Data cleaning & transformation** (joins, date truncation, aggregations)  
-- **Portfolio-ready metrics** suitable for SaaS business analytics  
+**Insight:**  
+Churn fluctuates month to month, with noticeable spikes in certain periods, suggesting potential pricing, product, or support-related friction.
 
-## Insights
+---
 
-- High-tier plans (Enterprise) show slightly higher churn than Pro  
-- Features like `Dashboard` and `Reports` have the highest monthly adoption  
-- Accounts with more support tickets tend to have higher churn, indicating friction points  
-- Active subscribers are growing steadily month over month, but churn spikes in certain months  
+### Churn Rate by Plan Tier
+![Churn Rate by Plan Tier](images/churn_rate_by_plan.png)
+
+**Insight:**  
+Higher-tier plans exhibit slightly higher churn rates, which may reflect pricing sensitivity, onboarding complexity, or elevated feature expectations among advanced users.
+
+---
+
+### Feature Adoption Over Time
+![Feature Adoption Over Time](images/feature_adoption_over_time.png)
+
+**Insight:**  
+Core features demonstrate consistent growth in adoption, while secondary features trail behind—highlighting opportunities for improved onboarding and feature discovery.
+
+---
+
+## Tools & Skills Demonstrated
+
+- **SQL (DuckDB)** for querying, joins, aggregations, and windowed time analysis  
+- **Data transformation & cleaning**, including date handling and null-safe calculations  
+- **SaaS metrics** such as churn rate, active users, and feature adoption  
+- **Business-focused analysis** with clear, actionable insights  
+
+---
+
+## What I’d Analyze Next
+
+Given more time or access to production data, I would extend this analysis by:
+
+- **Cohort analysis** to compare churn and retention by signup month  
+- **Trial-to-paid conversion rates** segmented by plan tier  
+- **Revenue churn vs customer churn**, including MRR loss over time  
+- **Support ticket sentiment vs churn probability**  
+- **Feature usage depth**, measuring not just adoption but frequency and duration  
+
+These extensions would help leadership better understand **why customers churn**, not just when.
+
+---
 
 ## How to Run
 
 1. Open the notebook `saas_churn_analysis.ipynb` in Kaggle  
-2. Add the dataset input from Kaggle  
-3. Run each cell to reproduce SQL queries and metrics  
+2. Add the dataset as a Kaggle input  
+3. Run all cells to reproduce SQL queries, metrics, and visualizations  
 
 ---
 
-*This project is part of Fred Olivares' data analytics portfolio.*
+*This project is part of Fred Olivares’ data analytics portfolio.*
