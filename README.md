@@ -63,6 +63,14 @@ Core features demonstrate consistent growth in adoption, while secondary feature
 
 ---
 
+### Support Tickets vs Churn
+![Support Tickets vs Churn](images/support_tickets_vs_churn.png)
+
+**Insight:**  
+Accounts with a higher number of support tickets exhibit higher churn rates, suggesting that unresolved issues or product friction contribute to customer attrition.
+
+---
+
 ## Tools & Skills Demonstrated
 
 - **SQL (DuckDB)** for querying, joins, aggregations, and windowed time analysis  
